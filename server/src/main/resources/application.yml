@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: ${:dev}
+  cors:
+    enable: false
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+application:
+  # Create an application to obtain credentials at
+  # https://developer.paypal.com/dashboard/applications/sandbox
+  paypal:
+    paypal-client-secret: ${PAYPAL_CLIENT_SECRET}
+    paypal-client-id: ${PAYPAL_CLIENT_ID}
+    url: ${PAYPAL_URL}
+
+server:
+  port: ${PORT:8080}
